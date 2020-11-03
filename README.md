@@ -1,0 +1,2 @@
+# BinBlog
+a blog
