@@ -63,9 +63,10 @@ export default {
 }
 #title {
   font-family: "微软雅黑";
-  font-size: 35px;
+  font-size: 40px;
   text-align: center;
   color: black;
+  font-weight: bold;
 }
 #content {
   font-family: "微软雅黑";
