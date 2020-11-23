@@ -14,7 +14,7 @@
     </div>
     <!-- 内容 -->
     <div id="content">
-      {{ content }}
+      <!-- {{ content }} -->
     </div>
     <!-- 时间 -->
     <div id="postedtime">
@@ -30,11 +30,30 @@ export default {
     return {
       title: "this is a title",
       flags: ["vue", "java", "mybatis"],
-      content: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      content: "## aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       postedtime: "write on ",
-      time: "2020-02-02"
+      time: "2020-02-02",
+      converter: null,
     };
   },
+  /* watch: {
+    content: 'contentChanged'
+  }, */
+  mounted() {
+    this.init();
+    this.contentChanged();
+  },
+  methods: {
+    init() {
+      let showdown = require('showdown');
+      let converter = new showdown.Converter();
+      this.converter = converter;
+    },
+    contentChanged() {
+      let html = this.converter.makeHtml(this.content);
+      document.getElementById("content").innerHTML = html;
+    }
+  }
 };
 </script>
 
