@@ -1,19 +1,23 @@
 <template>
-  <div>
+  <div id="article">
     <!-- 标题 -->
-    <div>
+    <div id="title">
       {{ title }}
     </div>
     <!-- 标签 -->
-    <div>
-      {{ flag }}
+    <div id="flags">
+      <span v-for="(flag, i) in flags" :key="i">
+        <el-tag type="info">
+          {{ flag }}
+        </el-tag>
+      </span>
     </div>
     <!-- 内容 -->
-    <div>
+    <div id="content">
       {{ content }}
     </div>
     <!-- 时间 -->
-    <div>
+    <div id="postedtime">
       {{ postedtime }}
     </div>
   </div>
@@ -25,7 +29,7 @@ export default {
   data() {
     return {
       title: "this is a title",
-      flag: "vue",
+      flags: ["vue", "java", "mybatis"],
       content: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       postedtime: "2020-02-02",
     };
@@ -34,4 +38,31 @@ export default {
 </script>
 
 <style scoped>
+#article {
+  margin: 0 auto;
+}
+#title {
+  font-family: "微软雅黑";
+  font-size: 35px;
+  text-align: center;
+  color: black;
+}
+#content {
+  font-family: "微软雅黑";
+  font-size: 25px;
+  text-align: center;
+  color: black;
+}
+#postedtime {
+  font-family: "微软雅黑";
+  font-size: 15px;
+  text-align: center;
+  color: black;
+  text-align: left; 
+  float: left; 
+  text-align: center;
+  width: 150px;
+  height: 25px;
+  border: 1px solid black;
+}
 </style>
