@@ -26,9 +26,10 @@
       ></el-col>
       <el-col :xs="14" :sm="14" :md="14" :lg="14" :xl="14"
         ><div id="music">
-          <span id="music"> 2 </span>
-        </div></el-col
-      >
+          <span id="music">
+            <MusicPlayer />
+          </span></div
+      ></el-col>
       <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4"
         ><div id="others">
           <span id="others"> 3 </span>
@@ -39,8 +40,10 @@
 </template>
 
 <script>
+import MusicPlayer from "./MusicPlayer";
 export default {
   name: "HeadBar",
+  components: {MusicPlayer},
   data() {
     return {
       url: require("../assets/myAvatar.jpg"),
