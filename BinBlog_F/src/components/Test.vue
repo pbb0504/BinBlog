@@ -10,18 +10,18 @@
 </template>
 
 <script>
-import Article from "./Article";
+import Article from './Article'
 export default {
-  name: "Test",
+  name: 'Test',
   components: {
-    Article,
+    Article
   },
-  data() {
+  data () {
     return {
-      message: "ohhhhhhhhhhhhhhhhhhhhhh",
-    };
-  },
-};
+      message: 'ohhhhhhhhhhhhhhhhhhhhhh'
+    }
+  }
+}
 </script>
 
 <style scoped>

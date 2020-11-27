@@ -40,16 +40,16 @@
 </template>
 
 <script>
-import MusicPlayer from "./MusicPlayer";
+import MusicPlayer from './MusicPlayer'
 export default {
-  name: "HeadBar",
+  name: 'HeadBar',
   components: {MusicPlayer},
-  data() {
+  data () {
     return {
-      url: require("../assets/myAvatar.jpg"),
-    };
-  },
-};
+      url: require('../assets/myAvatar.jpg')
+    }
+  }
+}
 </script>
 
 <style scoped>

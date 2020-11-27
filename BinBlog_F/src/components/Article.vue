@@ -25,36 +25,36 @@
 
 <script>
 export default {
-  name: "Article",
-  data() {
+  name: 'Article',
+  data () {
     return {
-      title: "this is a title",
-      flags: ["vue", "java", "mybatis"],
-      content: "## aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      postedtime: "write on ",
-      time: "2020-02-02",
-      converter: null,
-    };
+      title: 'this is a title',
+      flags: ['vue', 'java', 'mybatis'],
+      content: '## aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+      postedtime: 'write on ',
+      time: '2020-02-02',
+      converter: null
+    }
   },
   /* watch: {
     content: 'contentChanged'
   }, */
-  mounted() {
-    this.init();
-    this.contentChanged();
+  mounted () {
+    this.init()
+    this.contentChanged()
   },
   methods: {
-    init() {
-      let showdown = require('showdown');
-      let converter = new showdown.Converter();
-      this.converter = converter;
+    init () {
+      let showdown = require('showdown')
+      let converter = new showdown.Converter()
+      this.converter = converter
     },
-    contentChanged() {
-      let html = this.converter.makeHtml(this.content);
-      document.getElementById("content").innerHTML = html;
+    contentChanged () {
+      let html = this.converter.makeHtml(this.content)
+      document.getElementById('content').innerHTML = html
     }
   }
-};
+}
 </script>
 
 <style scoped>
@@ -79,7 +79,7 @@ export default {
   font-size: 15px;
   text-align: center;
   color: black;
-  float: left; 
+  float: left;
   width: 150px;
   height: 25px;
   /* border: 1px solid black; */

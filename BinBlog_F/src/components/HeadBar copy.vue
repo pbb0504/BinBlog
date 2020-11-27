@@ -19,13 +19,13 @@
 
 <script>
 export default {
-  name: "HeadBar2",
-  data() {
+  name: 'HeadBar2',
+  data () {
     return {
-      url: require("../assets/myAvatar.jpg"),
-    };
-  },
-};
+      url: require('../assets/myAvatar.jpg')
+    }
+  }
+}
 </script>
 
 <style scoped>

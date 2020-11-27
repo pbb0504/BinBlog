@@ -11,31 +11,31 @@
 
 <script>
 export default {
-  name: "Demo1",
-  data() {
+  name: 'Demo1',
+  data () {
     return {
-      content: "",
-      converter: null,
-    };
+      content: '',
+      converter: null
+    }
   },
   watch: {
-    content: "contentChanged",
+    content: 'contentChanged'
   },
-  mounted() {
-    this.init();
+  mounted () {
+    this.init()
   },
   methods: {
-    init() {
-      let showdown = require("showdown");
-      let converter = new showdown.Converter();
-      this.converter = converter;
+    init () {
+      let showdown = require('showdown')
+      let converter = new showdown.Converter()
+      this.converter = converter
     },
-    contentChanged() {
-      let html = this.converter.makeHtml(this.content);
-      document.getElementById("showContent").innerHTML = html;
-    },
-  },
-};
+    contentChanged () {
+      let html = this.converter.makeHtml(this.content)
+      document.getElementById('showContent').innerHTML = html
+    }
+  }
+}
 </script>
 
 <style scoped>
