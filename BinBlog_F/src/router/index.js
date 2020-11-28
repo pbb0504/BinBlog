@@ -28,6 +28,6 @@ export default new Router({
       path: '/headbar2',
       name: 'HeadBar2',
       component: HeadBar2
-    },
+    }
   ]
 })
